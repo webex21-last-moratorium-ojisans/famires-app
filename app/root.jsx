@@ -7,6 +7,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import Header from './components/header.jsx';
 
 export const links = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
@@ -22,6 +23,7 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <Header />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
